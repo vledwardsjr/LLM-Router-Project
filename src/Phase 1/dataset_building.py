@@ -30,3 +30,5 @@ print(df_sampled["source_category"].value_counts())
 print(df_sampled["query_word_count"].describe())
 
 df_sampled.to_parquet('/Users/vledwards09/Desktop/personal projects/LLM-Router-Project/data/raw_queries_parquet', index=False)
+
+
