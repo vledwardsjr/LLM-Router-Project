@@ -10,9 +10,13 @@ models/*.json
 models/*.joblib
 !models/.gitkeep
 
-# env
+# env / secrets
 .env
 *.env
+**/secrets.py
+**/*_key.txt
+
+# python
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
@@ -24,12 +28,6 @@ venv/
 # OS
 .DS_Store
 
-# API keys — never commit
-**/secrets.py
-**/*_key.txt
-
-#handoff Documents
-Handoff Docs/*.md
-
-#project instructions
-PROJECT_INSTRUCTIONS*.md
+# Lambda deployment build artifacts (large, regeneratable)
+deploy/package/
+deploy/lambda.zip

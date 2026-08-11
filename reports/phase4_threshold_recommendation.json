@@ -1,0 +1,30 @@
+{
+  "max_quality_loss_target": 4.0,
+  "logistic_regression": {
+    "threshold": 0.76,
+    "pct_routed_small": 0.3644,
+    "avg_quality_loss": -0.2744,
+    "p90_quality_loss": 1.0,
+    "max_quality_loss": 3.0,
+    "max_quality_loss_target": 4.0
+  },
+  "xgboost": {
+    "threshold": 0.8,
+    "pct_routed_small": 0.4567,
+    "avg_quality_loss": -0.1509,
+    "p90_quality_loss": 1.0,
+    "max_quality_loss": 4.0,
+    "max_quality_loss_target": 4.0
+  },
+  "always_large_baseline": {
+    "pct_routed_small": 0.0,
+    "avg_quality_loss": 0.0,
+    "max_quality_loss": 0.0
+  },
+  "always_small_baseline": {
+    "pct_routed_small": 1.0,
+    "avg_quality_loss": -0.0767,
+    "max_quality_loss": 7.0
+  },
+  "note": "avg_quality_loss stays <= 0 across the ENTIRE threshold range on this dataset -- even always-route-to-small doesn't hurt average judge-scored quality, and p90 is flat too (judge scores are integers 1-10, so percentiles snap to discrete values). This is a real, reportable finding tied to Phase 1's generous SCORE_GAP_THRESHOLD=1 label rule and judge scores clustering high (see Phase 1 results). The recommendation above is therefore based on the worst single-query (max) quality loss instead, which moves meaningfully across the curve (7 -> 3 points as the threshold tightens) -- the router's real value here is cutting tail-risk, not improving the average."
+}

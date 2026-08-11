@@ -1,0 +1,12 @@
+feature,corr_with_length,length_confounded
+query_char_count,0.999,True
+query_sentence_count,0.974,True
+query_capitalized_word_count,0.813,True
+query_number_count,0.785,True
+query_number_density,0.217,False
+ambiguity_score,-0.2,False
+query_avg_word_length,0.164,False
+reasoning_step_count,-0.159,False
+label,0.099,False
+query_capitalized_density,0.081,False
+query_has_question_mark,-0.078,False

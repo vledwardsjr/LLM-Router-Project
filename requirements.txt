@@ -7,3 +7,6 @@ shap
 boto3
 jupyter
 pyarrow
+anthropic
+datasets
+python-dotenv
