@@ -34,3 +34,6 @@ venv/
 # Lambda deployment build artifacts (large, regeneratable)
 deploy/package/
 deploy/lambda.zip
+
+# hide this file from the repo itself
+.gitignore
