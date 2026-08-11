@@ -28,6 +28,9 @@ venv/
 # OS
 .DS_Store
 
+# Claude Code
+.claude/
+
 # Lambda deployment build artifacts (large, regeneratable)
 deploy/package/
 deploy/lambda.zip
